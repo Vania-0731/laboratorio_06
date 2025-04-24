@@ -17,21 +17,19 @@ Este es un proyecto de ejemplo que permite gestionar cursos en una aplicación w
 
 ## Configura la base de datos
 Asegúrate de tener MySQL o MariaDB instalado. Luego, crea la base de datos y las tablas necesarias ejecutando los siguientes comandos SQL:
-CREATE DATABASE laboratorio_06;
-USE laboratorio_06;
-
-CREATE TABLE Curso (
-    chrCurCodigo CHAR(3) NOT NULL,
-    vchCurNombre VARCHAR(50) NULL,
-    intCurCreditos INT(2) NULL
+Primero esto:
+CREATE TABLE Curso(
+chrCurCodigo char(3) NOT NULL,
+vchCurNombre varchar(50) NULL,
+intCurCreditos int(2) NULL
 );
 
+Luego esto:
 ALTER TABLE Curso
 ADD PRIMARY KEY (chrCurCodigo);
-
-INSERT INTO Curso VALUES ('c01', 'junior', 5);
-INSERT INTO Curso VALUES ('c02', 'senior', 5);
-INSERT INTO Curso VALUES ('c03', 'moviles', 5);
+insert Curso values('c01','junior',5);
+insert Curso values('c02','senior',5);
+insert Curso values('c03','moviles',5);
 
 # Configuración del Proyecto
   Importa el proyecto en IntelliJ IDEA o tu IDE favorito.
