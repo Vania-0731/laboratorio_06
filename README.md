@@ -1,3 +1,4 @@
+
 # Proyecto de CRUD de Cursos
 
 Este es un proyecto de ejemplo que permite gestionar cursos en una aplicación web utilizando Java con Jakarta EE y MySQL. Permite agregar, editar, listar y eliminar cursos de una base de datos.
@@ -14,34 +15,38 @@ Este es un proyecto de ejemplo que permite gestionar cursos en una aplicación w
 1. **Clona el repositorio**:
    ```bash
    git clone https://github.com/usuario/tu-proyecto.git
+   ```
 
 ## Configura la base de datos
 Asegúrate de tener MySQL o MariaDB instalado. Luego, crea la base de datos y las tablas necesarias ejecutando los siguientes comandos SQL:
-Primero esto:
-```bash
-CREATE TABLE Curso(
-chrCurCodigo char(3) NOT NULL,
-vchCurNombre varchar(50) NULL,
-intCurCreditos int(2) NULL
-);
-´´´
 
-Luego esto:
-```bash
+### Primero esto:
+```sql
+CREATE TABLE Curso (
+  chrCurCodigo char(3) NOT NULL,
+  vchCurNombre varchar(50) NULL,
+  intCurCreditos int(2) NULL
+);
+```
+
+### Luego esto:
+```sql
 ALTER TABLE Curso
 ADD PRIMARY KEY (chrCurCodigo);
-insert Curso values('c01','junior',5);
-insert Curso values('c02','senior',5);
-insert Curso values('c03','moviles',5);
-´´´
 
-# Configuración del Proyecto
-  Importa el proyecto en IntelliJ IDEA o tu IDE favorito.
+INSERT INTO Curso VALUES ('c01', 'junior', 5);
+INSERT INTO Curso VALUES ('c02', 'senior', 5);
+INSERT INTO Curso VALUES ('c03', 'moviles', 5);
+```
 
-## Compila el proyecto usando Maven para resolver las dependencias:
+## Configuración del Proyecto
+Importa el proyecto en IntelliJ IDEA o tu IDE favorito.
+
+### Compila el proyecto usando Maven para resolver las dependencias:
 ```bash
 mvn clean install
 ```
+
 Despliega el proyecto en un servidor de aplicaciones compatible con Jakarta EE (como Apache Tomcat).
 
 ## Uso
@@ -53,4 +58,3 @@ Puedes agregar, editar, listar y eliminar cursos usando las interfaces proporcio
 Este proyecto está basado en un CRUD simple que interactúa con una base de datos MySQL.
 
 Las operaciones de CRUD están implementadas utilizando servlets y JSP.
-
