@@ -35,6 +35,7 @@ insert Curso values('c03','moviles',5);
   Importa el proyecto en IntelliJ IDEA o tu IDE favorito.
 
 ## Compila el proyecto usando Maven para resolver las dependencias:
+```bash
 mvn clean install
 Despliega el proyecto en un servidor de aplicaciones compatible con Jakarta EE (como Apache Tomcat).
 
