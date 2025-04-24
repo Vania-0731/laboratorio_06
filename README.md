@@ -16,6 +16,7 @@ Este es un proyecto de ejemplo que permite gestionar cursos en una aplicación w
    git clone https://github.com/usuario/tu-proyecto.git
 
 ## Configura la base de datos
+```bash
 Asegúrate de tener MySQL o MariaDB instalado. Luego, crea la base de datos y las tablas necesarias ejecutando los siguientes comandos SQL:
 Primero esto:
 CREATE TABLE Curso(
@@ -25,6 +26,7 @@ intCurCreditos int(2) NULL
 );
 
 Luego esto:
+```bash
 ALTER TABLE Curso
 ADD PRIMARY KEY (chrCurCodigo);
 insert Curso values('c01','junior',5);
@@ -37,6 +39,7 @@ insert Curso values('c03','moviles',5);
 ## Compila el proyecto usando Maven para resolver las dependencias:
 ```bash
 mvn clean install
+```
 Despliega el proyecto en un servidor de aplicaciones compatible con Jakarta EE (como Apache Tomcat).
 
 ## Uso
